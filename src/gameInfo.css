@@ -1,0 +1,17 @@
+.game-info_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-info_main__left{
+    margin-right: 20px;
+}
+.game-Info_descr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-Info_descr_text{
+    width: 800px;
+}

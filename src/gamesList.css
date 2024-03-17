@@ -1,0 +1,10 @@
+.games__list-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.games__list-block_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
