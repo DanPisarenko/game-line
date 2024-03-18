@@ -14,7 +14,7 @@ export default function Footer() {
                 2024 Dan Pisarenko
             </h2>
             <p className="footer-right">
-                Game-Line TG VK
+                Game-Line TG VK (созданно в учебных целях)
             </p>
         </div>
     )

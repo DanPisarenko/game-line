@@ -9,20 +9,20 @@ function App() {
   return (
     <div className="App">
      <div className='header'>
-      <Link to="/game-line"><h2>Game-Line</h2></Link>
+      <Link to="/"><h2>Game-Line</h2></Link>
         <div className='nav'>
-          <Link to="/game-line/games">игры</Link>
+          <Link to="/games">игры</Link>
           <a href="#">рецензии</a>
           <a href="#">форум</a>
           <a href="#">о нас</a>
         </div>       
      </div>
      <Routes>
-        <Route path='/game-line' element={<Main/>}/>
-        <Route path='/game-line/games' element={<Games/>}/>
-        <Route path='/game-line/games/1' element={<GameInfo/>}/>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/games' element={<Games/>}/>
+        <Route path='/games/1' element={<GameInfo/>}/>
         {/* <Route path='/rewiew' element={<Review/>}/> */}
-        <Route path='/game-line/review/1' element={<Review/>}/>
+        <Route path='/review/1' element={<Review/>}/>
         {/* <Route path='/lr-rewiew/' element={<Games/>}/> */}
         {/* <Route path='/lr-rewiew/:id' element={<Games/>}/> */}
         <Route path='*' element={<h2>Страница не найдена</h2>}/>
