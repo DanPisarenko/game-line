@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: rgb(144,252,254);
+  background: linear-gradient(0deg, rgba(144,252,254,1) 0%, rgba(255,232,183,1) 100%);
 }
 
 .App-logo {
@@ -72,4 +74,8 @@ a{
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.header_nav_a{
+  margin-left: 10px;
+  margin-right: 10px;
 }

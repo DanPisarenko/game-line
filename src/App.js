@@ -5,24 +5,20 @@ import Main from './Pages/Main';
 import Footer from './Components/Footer';
 import GameInfo from './Pages/GameInfo';
 import Review from './Pages/Review';
+import Reviews from './Pages/Reviews';
+import Header from './Components/Header';
+import About from './Pages/About';
 function App() {
   return (
     <div className="App">
-     <div className='header'>
-      <Link to="/"><h2>Game-Line</h2></Link>
-        <div className='nav'>
-          <Link to="/games">игры</Link>
-          <a href="#">рецензии</a>
-          <a href="#">форум</a>
-          <a href="#">о нас</a>
-        </div>       
-     </div>
+    <Header/>
      <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/games' element={<Games/>}/>
         <Route path='/games/1' element={<GameInfo/>}/>
-        {/* <Route path='/rewiew' element={<Review/>}/> */}
+        <Route path='/rewiew' element={<Reviews/>}/>
         <Route path='/review/1' element={<Review/>}/>
+        <Route path='/about' element={<About/>}/>
         {/* <Route path='/lr-rewiew/' element={<Games/>}/> */}
         {/* <Route path='/lr-rewiew/:id' element={<Games/>}/> */}
         <Route path='*' element={<h2>Страница не найдена</h2>}/>
