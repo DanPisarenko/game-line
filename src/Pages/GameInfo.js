@@ -39,6 +39,28 @@ export default function GameInfo() {
                 <p className="game-Info_descr_text">Компьютерная игра в жанре action/RPG, разработанная американской студией Avalanche Software и изданная Warner Bros. Games под лейблом Portkey Games. Действие игры разворачивается в фэнтезийной вселенной «Гарри Поттера» в XIX веке. Изначально выход игры на платформах Windows, PlayStation 4, PlayStation 5, Xbox One и Xbox Series X/S был запланирован на 2021 год, но в январе 2021 года разработчики объявили о переносе даты выхода на 2022 год. 15 декабря разработчики анонсировали дату выхода игры - 10 февраля 2023 года, для консолей текущего поколения и ПК. Релиз игры для консолей прошлого поколения изначально должен был состояться 4 апреля 2023 года, но позднее был перенесён на 5 мая того же года.</p>
             </div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/BtyBjOW8sGY?si=kBVnI2gvwvFM8MUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className="game-Info_comments">
+                <div className="game-Info_comments">
+                    <h3>Комментарии</h3>
+                    <form className="game-Info_comments_form">
+                        <input type="text" placeholder="Оставить комментарий"></input>
+                        <input type="submit" placeholder="отправить"></input>
+                    </form>
+                    <div className="game-Info_comments_list">
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

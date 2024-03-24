@@ -15,3 +15,9 @@
 .game-Info_descr_text{
     width: 800px;
 }
+.game-Info_comments{
+    margin: 30px;
+}
+.game-Info_comments_form{
+    margin: 15px;
+}
