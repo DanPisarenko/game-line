@@ -1,3 +1,4 @@
+import "../gameInfo.css"
 
 export default function Review(){
 
@@ -24,6 +25,48 @@ Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sa
                     <a href="#">Ссылка на сайт</a>
                     <a href="#">Ссылка на сайт</a>
                     <h3>Рейтинг: 4.2 из 5</h3>
+                    <div className="game-Info_comments">
+                    <h3>Комментарии</h3>
+                    <form className="game-Info_comments_form">
+                        <input type="text" placeholder="Оставить комментарий"></input>
+                        <input type="submit" placeholder="отправить"></input>
+                    </form>
+                    <div className="game-Info_comments_list">
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

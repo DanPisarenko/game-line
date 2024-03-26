@@ -60,9 +60,10 @@ a{
   justify-content: center;
   align-items: center;
 
+
 }
 .games__list-block_list_item_info{
-  background-color: rgb(252, 255, 97);
+  background-color: rgb(255, 255, 245);
   width: 220px;
 }
 .games__list-block_list_item_info_name{

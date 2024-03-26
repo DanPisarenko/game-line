@@ -58,6 +58,28 @@ export default function GameInfo() {
                                 </p>
                             </div>
                         </div>
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
