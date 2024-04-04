@@ -80,3 +80,42 @@ a{
   margin-left: 10px;
   margin-right: 10px;
 }
+.helper_line__best_qa_item{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: coral;
+    margin:32px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.helper_line__best_qa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.helper_line_page_quest{
+  /* width: 600px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: coral;
+  margin:32px;
+  padding: 16px;
+  border-radius: 16px;
+}
+.helper_line_page_quest_answers_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: lightgreen;
+  margin:32px;
+  padding: 16px;
+  border-radius: 16px;
+}

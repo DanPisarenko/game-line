@@ -8,6 +8,8 @@ import Review from './Pages/Review';
 import Reviews from './Pages/Reviews';
 import Header from './Components/Header';
 import About from './Pages/About';
+import HelperLine from './Pages/HelperLine';
+import HelperLinePage from './Pages/HelperLinePage';
 function App() {
   return (
     <div className="App">
@@ -17,7 +19,9 @@ function App() {
         <Route path='/games' element={<Games/>}/>
         <Route path='/games/1' element={<GameInfo/>}/>
         <Route path='/rewiew' element={<Reviews/>}/>
-        <Route path='/review/1' element={<Review/>}/>
+        <Route path='/helper-line' element={<HelperLine/>}/>
+        <Route path='/helper-line/:id' element={<HelperLinePage/>}/>
+        <Route path='/review/:id' element={<Review/>}/>
         <Route path='/about' element={<About/>}/>
         {/* <Route path='/lr-rewiew/' element={<Games/>}/> */}
         {/* <Route path='/lr-rewiew/:id' element={<Games/>}/> */}
