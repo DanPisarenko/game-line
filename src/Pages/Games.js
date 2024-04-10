@@ -72,7 +72,7 @@ export default function Games(){
                 <div className="games__list-block_list">
                     {games.map((e) =>{
                         return(
-                            <div className="games__list-block_list_item" key={e.id} onClick={(e) => window.location.href=`/games/${e.id}`}>
+                            <div className="games__list-block_list_item" key={e.id} onClick={() => window.location.href=`/games/${e.id}`}>
                             <div className="games__list-block_list_itme_image" style={{backgroundImage: `url(${e.image})`}}>
                          </div>
                             <div className="games__list-block_list_item_info">
