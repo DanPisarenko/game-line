@@ -9,6 +9,7 @@ export default function HelperLinePage(){
     const [game, setGame] = useState([])
     const [answer, setAnswer] = useState([])
     const [idAnswer, setIdAnswer] = useState('')
+    const [Answer_done, setAnswer_done] = useState(0)
 
     useEffect(() => {
         if ( id ) {
@@ -28,7 +29,9 @@ export default function HelperLinePage(){
             axios.get(`http://localhost:8080/api/qa/answer/${idAnswer}`)
                 .then(res => {
                     console.log(res.data.rows)
+                    setAnswer_done(res.data.rows[0].id)
                     setAnswer(res.data.rows)
+                    setAnswer_done(true)
                 })
                 .catch(err => {
                     console.log(err)
@@ -51,13 +54,22 @@ export default function HelperLinePage(){
                 <h2 className='helper_line_page_quest_answers_title'>Ответы</h2>
                 <div className='helper_line_page_quest_answers_list'>
                     {answer.map((e) => {
+
                         return(
-                        <div className='helper_line_page_quest_answers_item'>
+                            <div className='helper_line_page_quest_answers_item'>
                             <h4 className="helper_line__best_qa_item_theme">Автор: Alex98</h4>
                             <p className="helper_line__best_qa_item_title">{e.answer}</p>
                         </div>
                         )
+                    
                     })}
+                    <div className='helper_line_page_quest_giveanswer'>
+                        <h3>Оставить ответ</h3>
+                        <form>
+                            <input type='text' name="answer" placeholder='Оставить ответ на вопрос'></input>
+                            <button type='submit'>Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

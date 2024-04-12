@@ -90,13 +90,24 @@ a{
     margin:32px;
     padding: 16px;
     border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 16px #3f3f3f;
 }
-
+.helper_line__best_qa_item:hover{
+  background-color: #ff4400;
+}
 .helper_line__best_qa{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.helper_line_page{
+  margin-left: 96px;
+  margin-right: 96px;
+  background-color: #fff;
+  min-height: calc(100vh - 142px);
 }
 .helper_line_page_quest{
   /* width: 600px; */
@@ -104,18 +115,32 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: coral;
-  margin:32px;
-  padding: 16px;
-  border-radius: 16px;
+  background-color: rgb(255, 207, 189);
+  padding-left:64px;
+  padding-right:64px;
+}
+.helper_line_page_quest_answers_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .helper_line_page_quest_answers_item{
+  width: 512px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: lightgreen;
+  background-color: rgb(255, 221, 158);
   margin:32px;
   padding: 16px;
   border-radius: 16px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
