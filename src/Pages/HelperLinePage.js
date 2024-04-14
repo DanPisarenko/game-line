@@ -1,7 +1,7 @@
 import '../App.css'
 import { useState, useEffect } from 'react';
 import {useParams} from 'react-router'
-import  axios  from 'axios';
+import axios from 'axios';
 export default function HelperLinePage(){
 
     
@@ -10,6 +10,31 @@ export default function HelperLinePage(){
     const [answer, setAnswer] = useState([])
     const [idAnswer, setIdAnswer] = useState('')
     const [Answer_done, setAnswer_done] = useState(0)
+
+    const [data, setData] = useState({
+        id_user:  '',
+        id_quest:  '',
+        answer:  ''
+    })
+
+
+    function submit(e) {
+        e.preventDefault();
+        axios.post('http://localhost:8080/api/qa_answer', {
+            id_user: 2,
+            id_quest: id,
+            answer: data.answer,
+        }).then(res => {
+            console.log(res.data)
+        })
+
+    }
+    function handle(e) {
+        const newdata={...data}
+        newdata[e.target.id] = e.target.value
+        setData(newdata)
+        // console.log(newdata)
+    }
 
     useEffect(() => {
         if ( id ) {
@@ -65,9 +90,9 @@ export default function HelperLinePage(){
                     })}
                     <div className='helper_line_page_quest_giveanswer'>
                         <h3>Оставить ответ</h3>
-                        <form>
-                            <input type='text' name="answer" placeholder='Оставить ответ на вопрос'></input>
-                            <button type='submit'>Отправить</button>
+                        <form onSubmit={(e) => submit(e)}>
+                            <input type='text' name="answer" placeholder='Оставить ответ на вопрос' onChange={(e)=>handle(e)} value={data.answer} id='answer'></input>
+                            <button>Отправить</button>
                         </form>
                     </div>
                 </div>
