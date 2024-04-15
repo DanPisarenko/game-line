@@ -1,0 +1,13 @@
+.userpage_wrapper_usercard_img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+.userpage_wrapper{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin: 32px;
+}
+.userpage_wrapper_usercard{
+    margin-right: 32px;
+}

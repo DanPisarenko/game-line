@@ -10,6 +10,8 @@ import Header from './Components/Header';
 import About from './Pages/About';
 import HelperLine from './Pages/HelperLine';
 import HelperLinePage from './Pages/HelperLinePage';
+import NotFound from './Pages/NotFound';
+import UserPage from './Pages/UserPage';
 function App() {
 
   let style_wrapper = {
@@ -23,6 +25,7 @@ function App() {
     <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/games' element={<Games/>}/>
+        <Route path='/user/:id' element={<UserPage/>}/>
         <Route path='/games/:id' element={<GameInfo/>}/>
         <Route path='/rewiew' element={<Reviews/>}/>
         <Route path='/helper-line' element={<HelperLine/>}/>
@@ -31,7 +34,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         {/* <Route path='/lr-rewiew/' element={<Games/>}/> */}
         {/* <Route path='/lr-rewiew/:id' element={<Games/>}/> */}
-        <Route path='*' element={<h2>Страница не найдена</h2>}/>
+        <Route path='*' element={<NotFound/>}/>
     </Routes>
     </div>
      <Footer/>

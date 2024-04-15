@@ -10,8 +10,8 @@ export default function Header() {
             <Link className="header_nav_a" to="/rewiew">обзоры и новости</Link>
             <Link className="header_nav_a" to="/helper-line">Helper-line</Link>
             <a className="header_nav_a" href="#" onClick={() => alert('Пока разрабатывается')}>рецензии</a>
-            <a className="header_nav_a" href="#" onClick={() => alert('Пока разрабатывается')}>форум</a>
             <Link className="header_nav_a" to="/about">о нас</Link>
+            <Link className="header_nav_a" to="/auth">Авторизоваться</Link>
           </div>       
        </div>
     )
