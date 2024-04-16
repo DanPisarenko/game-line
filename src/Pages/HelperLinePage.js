@@ -90,9 +90,9 @@ export default function HelperLinePage(){
                     })}
                     <div className='helper_line_page_quest_giveanswer'>
                         <h3>Оставить ответ</h3>
-                        <form onSubmit={(e) => submit(e)}>
-                            <input type='text' name="answer" placeholder='Оставить ответ на вопрос' onChange={(e)=>handle(e)} value={data.answer} id='answer'></input>
-                            <button>Отправить</button>
+                        <form className='form_helper_line' onSubmit={(e) => submit(e)}>
+                            <input className='form_input_comment' type='text' name="answer" placeholder='Оставить ответ на вопрос' onChange={(e)=>handle(e)} value={data.answer} id='answer'></input>
+                            <button className='form_input_submit'>Отправить</button>
                         </form>
                     </div>
                 </div>

@@ -1,10 +1,22 @@
 .games__list-block{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+
+}
+.games__list-block_list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.games{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.games__list-block_list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.games__list-block_list_item{
+    cursor: pointer;
 }

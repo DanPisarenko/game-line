@@ -33,3 +33,14 @@
     color: azure;
     
 }
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main_wrapper{
+    background-color: #fff;
+    padding-left: 64px;
+    padding-right: 64px;
+}

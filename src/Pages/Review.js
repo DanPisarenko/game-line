@@ -4,12 +4,13 @@ export default function Review(){
 
     return(
         <div className="review">
-            <div className="review__main-img">
+            <div className="review__main-img" style={{backgroundImage: `url('https://files.vgtimes.ru/gallery/main/153185/cybere1042f1ec68.jpg')`}}>
                 <h2 className="review__main-img_h2">Ивестна дата Выхода GTA 6</h2>
-                <img className="main__reviews_list_item-img" src="https://files.vgtimes.ru/gallery/main/153185/cybere1042f1ec68.jpg" alt="Gta6" width="512"/>
+                {/* <img className="main__reviews_list_item-img" src="https://files.vgtimes.ru/gallery/main/153185/cybere1042f1ec68.jpg" alt="Gta6" width="512"/> */}
 
             </div>
-            <div className="review__main_txtm">
+            <div className="review__main_wrapper">
+                <div className="review__main_txtm">
                 <div className="review__main_txtm_sets">
                     <h4 className="review__main_txtm_date">Дата: 02/02/2024</h4>
                     <h4 className="review__main_txtm_category">Новость ДНЯ</h4>
@@ -28,8 +29,8 @@ Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sa
                     <div className="game-Info_comments">
                     <h3>Комментарии</h3>
                     <form className="game-Info_comments_form">
-                        <input type="text" placeholder="Оставить комментарий"></input>
-                        <input type="submit" placeholder="отправить"></input>
+                        <input className="form_input_comment" type="text" placeholder="Оставить комментарий"></input>
+                        <input className="form_input_submit" type="submit" placeholder="отправить"></input>
                     </form>
                     <div className="game-Info_comments_list">
                         <div className="game-Info_comments_list_item">
@@ -69,6 +70,8 @@ Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sa
                 </div>
                 </div>
             </div>
+            </div>
+            
         </div>
     )
 }

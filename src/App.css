@@ -54,7 +54,7 @@ a{
 .games__list-block_list_item{
   width: 320px;
   height: 480px;
-  padding: 20px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,4 +143,33 @@ form{
 button{
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.form_input_submit{
+  width: 192px;
+  border: none;
+  background-color: lightsalmon;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form_input_submit:hover{
+  background-color: salmon;
+}
+.form_input_comment{
+  width: 300px;
+
+  border: 1px solid;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 8px;
+
+}
+.form_helper_line{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
 }

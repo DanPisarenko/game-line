@@ -15,11 +15,15 @@
 .game-Info_descr_text{
     width: 800px;
 }
-.game-Info_comments{
+/* .game-Info_comments{
     margin: 30px;
-}
+} */
 .game-Info_comments_form{
     margin: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .game-Info_comments_list_item_userdata_img{
     object-fit: cover;
@@ -42,6 +46,79 @@
 }
 .review__main_txtm_descr_p{
     padding: 64px;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 12px;
+}
+.form_input_submit{
+    width: 192px;
+    border: none;
+    background-color: lightsalmon;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_input_submit:hover{
+    background-color: salmon;
+}
+.form_input_comment{
+    width: 300px;
+
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 8px;
+
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.review__main_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.review__main_txtm{
+    width: 80%;
+    background-color: #fff;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.review__main-img{
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
+}
+.review__main-img_h2{
+    margin-bottom: 64px;
+    margin-left: 64px;
+    color: white;
+    text-shadow: 0 0 16px #000;
+    font-size: 32pt;
+    text-align: left;
+}
+.game-info_wrapper{
+    background-color: #fff;
+    width: 80%;
+}
+.game-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-Info_comments{
+    background-color: #fff;
+    padding: 100px;
+    width: 70.3%;
 }

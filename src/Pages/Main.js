@@ -9,7 +9,9 @@ export default function Main(){
             <div className="main-hdr_img">
                 <h2 className="main-h2-text">Добро пожаловать на сайт Game-Line</h2>
             </div>
+            <div className="main_wrapper">
             <Reviews/>
+            </div>
         </div>
     )
 

@@ -4,53 +4,6 @@ import axios from "axios"
 
 export default function Games(){
 
-    let base = [{
-        'id': 1,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },
-    {
-        'id': 2,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },
-    {
-        'id': 3,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },
-    {
-        'id': 4,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },{
-        'id': 5,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },{
-        'id': 6,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    },{
-        'id': 7,
-        'game_name': 'hogwarts Legacy',
-        'jenre': "Action",
-        'year_anonce': 2023,
-        'rating': 5
-    }]
-
     const [games, setGames] = useState([])
 
     useEffect(() => {
