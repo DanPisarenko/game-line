@@ -12,6 +12,7 @@ import HelperLine from './Pages/HelperLine';
 import HelperLinePage from './Pages/HelperLinePage';
 import NotFound from './Pages/NotFound';
 import UserPage from './Pages/UserPage';
+import Auth from './Pages/Auth';
 function App() {
 
   let style_wrapper = {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/helper-line/:id' element={<HelperLinePage/>}/>
         <Route path='/review/:id' element={<Review/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/auth' element={<Auth/>}/>
         {/* <Route path='/lr-rewiew/' element={<Games/>}/> */}
         {/* <Route path='/lr-rewiew/:id' element={<Games/>}/> */}
         <Route path='*' element={<NotFound/>}/>
