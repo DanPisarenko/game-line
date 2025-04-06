@@ -20,11 +20,30 @@ export default function HelperLine(){
     return(
         <div className="helper_line">
             <h2 className="helper_line__h2">Helper-Line - помощь в играх, и не только</h2>
+            <p className='helper_line__descr'>
+                На этой странице ты можешь посмотреть вопросы и ответы, касающихся тематике игр, либо можешь создать сам вопрос, если не нашелся подходящий вопрос.
+            </p>
+
+            <button className="main__reviews_search_block_btns_item">Задать вопрос</button>
+
+
+            <h3>Последние вопросы</h3>
+            <div className="main__reviews_search_block">
+            <div className="main__reviews_search_block_btns">
+                <button className="main__reviews_search_block_btns_item">За сегодня</button>
+                <button className="main__reviews_search_block_btns_item">За неделю</button>
+                <button className="main__reviews_search_block_btns_item">За месяц</button>
+            </div>
+            <form className="main__reviews_search_block_input">
+                <input className="main__reviews_search_block_input_item" type="text" name="gline_search" placeholder="Найти что-то..."/>
+                <button className="main__reviews_search_block_btns_item">Поиск</button>
+            </form>
+        </div>
             <div className="helper_line__best_qa">
             {quests.map((e) => {
                 return(
                 <div className="helper_line__best_qa_item" key={e.id} onClick={() => window.location.href=`/helper-line/${e.id}`}>
-                    <h4 className="helper_line__best_qa_item_theme">{e.theme}</h4>
+                    <h4 className="helper_line__best_qa_item_theme"><i>Категория: {e.theme}</i></h4>
                     <h3 className="helper_line__best_qa_item_title">{e.question}</h3>
                 </div>
                 )

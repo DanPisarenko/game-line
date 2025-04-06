@@ -1,14 +1,38 @@
+import { useParams } from "react-router";
 import "../gameInfo.css"
-
+import React, { useState } from "react";
+import axios from "axios";
 export default function Review(){
+
+    let [news, setNews] = React.useState([])
+
+    let {id} = useParams()
+
+    React.useEffect(() => {
+        axios.get(`http://localhost:8080/api/news/${id}`)
+            .then(res => {
+                console.log(res.data.rows)
+                setNews(res.data.rows)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    
+}, []);
 
     return(
         <div className="review">
-            <div className="review__main-img" style={{backgroundImage: `url('https://files.vgtimes.ru/gallery/main/153185/cybere1042f1ec68.jpg')`}}>
-                <h2 className="review__main-img_h2">Ивестна дата Выхода GTA 6</h2>
+            {news.map((e) => {
+                        return(
+            <div className="review__main-img" style={{backgroundImage: `url('${e.image}')`}}>
+                <h2 className="review__main-img_h2">{e.title}</h2>
                 {/* <img className="main__reviews_list_item-img" src="https://files.vgtimes.ru/gallery/main/153185/cybere1042f1ec68.jpg" alt="Gta6" width="512"/> */}
 
             </div>
+                    )})}
+
+{news.map((e) => {
+return(
             <div className="review__main_wrapper">
                 <div className="review__main_txtm">
                 <div className="review__main_txtm_sets">
@@ -17,11 +41,7 @@ export default function Review(){
                 </div>
                 <div className="review__main_txtm_descr" style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                     <p className="review__main_txtm_descr_p" style={{width: "800px"}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec fermentum tellus, id iaculis metus. Maecenas tincidunt et ex ac accumsan. Ut sollicitudin, tortor vitae ornare maximus, elit libero iaculis arcu, sed imperdiet mauris tellus sed turpis. Nullam finibus tortor quis est egestas, sed tristique justo porta. Duis dictum pulvinar sem, a efficitur ex lobortis eu. Donec ornare vehicula dui at fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt magna eget ultricies tincidunt. Maecenas nec vestibulum ex. Nullam faucibus, arcu at rhoncus aliquet, neque nunc mollis turpis, eget porttitor augue nisl id libero.
-Quisque sodales vel velit ac eleifend. Suspendisse tincidunt sem id quam pellentesque vulputate. Pellentesque nec arcu libero. Donec eu aliquam nibh. Proin luctus ornare ligula, ac fringilla erat pretium eget. Curabitur lacinia metus velit, eu ultricies mauris imperdiet ut. Mauris dignissim tortor sit amet mi sagittis, quis convallis mi posuere.
-Duis a dolor felis. Ut faucibus rutrum faucibus. Maecenas nec auctor nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In id ligula lectus. Aliquam vel orci velit. Sed nec ipsum volutpat, tempus lacus et, malesuada enim. Integer congue, nunc non pretium pulvinar, nibh sapien posuere nunc, ut tempus mauris arcu ut augue. Praesent porta condimentum interdum. Mauris eros nisi, congue et nisi a, consectetur tincidunt ligula.
-Suspendisse at tempus justo. Maecenas ac condimentum libero. Vivamus ornare ex ex, sit amet condimentum purus lobortis eu. Nam tempus bibendum tellus vitae mollis. Quisque ornare felis tincidunt mi posuere, a varius augue pharetra. Ut faucibus et purus interdum facilisis. Ut velit risus, vulputate quis faucibus id, faucibus vitae nisi. Maecenas rutrum lectus vitae metus dignissim efficitur. Vivamus scelerisque massa magna, quis porttitor elit lobortis sit amet. Donec ac auctor odio. Sed ultricies quam augue.
-Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sagittis ex aliquet, faucibus leo vulputate, fermentum eros. Etiam auctor odio dolor, vel eleifend justo blandit dictum. Fusce ornare vitae quam sed porta. In hac habitasse platea dictumst. Sed dictum lorem eget felis porttitor finibus. Sed eu ligula orci. In nec ante metus. Suspendisse rhoncus ultrices dui eu ultricies.
+                    {e.text}
                     </p>
                     <a href="#">Ссылка на сайт</a>
                     <a href="#">Ссылка на сайт</a>
@@ -33,7 +53,18 @@ Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sa
                         <input className="form_input_submit" type="submit" placeholder="отправить"></input>
                     </form>
                     <div className="game-Info_comments_list">
-                        <div className="game-Info_comments_list_item">
+                       <div className="game-Info_comments_list_item">
+                            <div className="game-Info_comments_list_item_userdata">
+                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
+                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
+                            </div>
+                            <div className="game-Info_comments_list_item_text">
+                                <p className="game-Info_comments_list_item_text_p">
+                                    Великолепная игра!!!
+                                </p>
+                            </div>
+                        </div>
+                        {/*  <div className="game-Info_comments_list_item">
                             <div className="game-Info_comments_list_item_userdata">
                                 <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
                                 <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
@@ -54,24 +85,69 @@ Donec ac porta dolor. Pellentesque facilisis sem vitae mattis feugiat. Mauris sa
                                     Великолепная игра!!!
                                 </p>
                             </div>
-                        </div>
-                        <div className="game-Info_comments_list_item">
-                            <div className="game-Info_comments_list_item_userdata">
-                                <img className="game-Info_comments_list_item_userdata_img" src="https://proprikol.ru/wp-content/uploads/2020/08/kartinki-lamborgini-lamborghini-38.jpg" width="96" alt="Jack"/>
-                                <span className="game-Info_comments_list_item_userdata_name">Jack Garry</span>
-                            </div>
-                            <div className="game-Info_comments_list_item_text">
-                                <p className="game-Info_comments_list_item_text_p">
-                                    Великолепная игра!!!
-                                </p>
-                            </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 </div>
             </div>
             </div>
+)})}
             
+        </div>
+    )
+}
+
+export function CreateReview(){
+
+
+    const [nameReview, setNameReview] = useState('')
+    const [img1, SetImg1] = useState('')
+    const [textReview, setTextReview] = useState('')
+
+
+    function loadFile1(a){
+        const file = a;
+        let reader = new FileReader();
+        const read = reader.readAsDataURL(file)
+        reader.onload = function() {
+            console.log(reader.result);
+            SetImg1(reader.result)
+          };
+        
+        }
+        function submit(e) {
+            try{
+            e.preventDefault();
+            alert("STOP")
+            axios.post('http://localhost:8080/api/news', {
+                namereview: nameReview,
+                text: textReview,
+                image: img1,
+                userid: localStorage.getItem('id_user')
+            }).then(res => {
+                console.log(res.data)
+                    //   console.log('reboot is compl')   
+
+            })
+          }catch(err){
+                console.log('ошибка загрузки в базу\n', err)
+                alert('ошибка загрузки данных')
+            }
+          
+          }
+
+    return(
+        <div className="create_rewiew">
+            <div className="create_rewiew_info">
+                <h3>Создать Обзор</h3>
+            </div>
+            <form className="create_rewiew_form_item" onSubmit={submit}>
+                <input className="input_on" type="text" placeholder="Название Обзора" onChange={(e) => setNameReview(e.target.value)} name="name_review" required="required"/>
+                <input className="input_on" type="file" name="name_review" required="required" accept=".jpg,.jpeg,.png,.webp" onChange={(e)=>loadFile1(e.target.files[0])}/>
+                <input className="input_on" type="text" placeholder="Текст Обзора" onChange={(e) => setTextReview(e.target.value)} name="text_review" required="required"/>
+                <button className="btn_on">Войти</button>
+
+            </form>
         </div>
     )
 }

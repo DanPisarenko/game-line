@@ -1,5 +1,5 @@
 .games__list-block{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -19,4 +19,8 @@
 }
 .games__list-block_list_item{
     cursor: pointer;
+}
+
+.games__list-block_list_item_info{
+    padding-top: 16px;
 }

@@ -191,7 +191,7 @@ button{
 .helper_line__descr{
   width: 32vw;
   padding: 46px;
-  background-color: rgba(255, 221, 158, 0.795);
+  background-color: rgb(255, 221, 158);
   border-radius: 12px;
   margin-bottom: 32px;
 }
@@ -295,11 +295,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
 }
-.user_icon_reg{
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-}
+
 .bg_text{
   text-shadow: 0 0 8px white;
 }
@@ -359,8 +355,4 @@ align-items: center;
   background-color: rgba(0, 81, 255, 0.74);
   color: #fff;
 
-}
-
-.helper_line__best_qa_item_title{
-  text-align: left;
 }

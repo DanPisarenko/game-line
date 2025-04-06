@@ -14,6 +14,7 @@
 }
 .game-Info_descr_text{
     width: 800px;
+    text-align: left;
 }
 /* .game-Info_comments{
     margin: 30px;
@@ -48,6 +49,7 @@
     padding: 64px;
     /* background-color: #fff; */
     border-radius: 12px;
+    text-align: left;
 }
 .form_input_submit{
     width: 192px;
@@ -70,6 +72,10 @@
     border-radius: 4px;
     margin: 8px;
 
+}
+
+.game-info{
+    z-index: 1;
 }
 
 .review{
@@ -120,5 +126,73 @@
 .game-Info_comments{
     background-color: #fff;
     padding: 100px;
-    width: 70.3%;
+    width: 65.2%;
+}
+
+/* Long-Read Styles */
+
+.ln_read{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ln_read_wrapper{
+    width: 78vw;
+    background-color: #fff;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.title_block{
+    display: flex;
+    justify-content: center;
+}
+.title_lnread{
+    text-align: left;
+    padding-left: 48px;
+}
+.ln_read_text{
+    width: 64vw;
+    text-align: left;
+}
+.ln_read_rating{
+    margin-top: 64px;
+    background-color: #ffa114;
+    font-weight: 600;
+    padding: 4px 16px 4px 16px;
+    border-radius: 24px;
+}
+.game_picture{
+    object-fit: cover;
+    width: 128px;
+    height: 128px;
+    padding: 4px;
+}
+
+.game-Info_awards{
+    margin: 0;
+    background-color: #fff;
+    width:  80%;
+}
+
+
+.create_rewiew{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create_rewiew_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.create_rewiew_form_item{
+    width: 512px;
 }

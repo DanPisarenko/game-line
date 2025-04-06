@@ -1,0 +1,27 @@
+.search_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68vw;
+    height: 32vh;
+    background-color: #fff;
+    text-align: left;
+}
+.search_item__img{
+    margin-left: 8px;
+    margin-right: 32px;
+}
+.search_items{
+    display: flex;
+    /* padding-top: ; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.search_item__info_header_name{
+    font-size: 18pt;
+}
+.search_items{
+    background-color: #ffffff81;
+    min-height: calc(100vh - 197px);
+}

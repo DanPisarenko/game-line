@@ -21,7 +21,7 @@ export default function HelperLinePage(){
     function submit(e) {
         e.preventDefault();
         axios.post('http://localhost:8080/api/qa_answer', {
-            id_user: 2,
+            id_user: localStorage.getItem('id_user'),
             id_quest: id,
             answer: data.answer,
         }).then(res => {
@@ -71,6 +71,7 @@ export default function HelperLinePage(){
                 <div className='helper_line_page_quest'>
                     <h4 className="helper_line__best_qa_item_theme">Автор: John1337</h4>
                     <h4 className="helper_line__best_qa_item_theme">{e.theme}</h4>
+                    <h4 className="helper_line__best_qa_item_theme">Категория: Проблемы с запуском игр</h4>
                     <h3 className="helper_line__best_qa_item_title">{e.question}</h3>
                 </div>                  
                 )
@@ -82,7 +83,7 @@ export default function HelperLinePage(){
 
                         return(
                             <div className='helper_line_page_quest_answers_item'>
-                            <h4 className="helper_line__best_qa_item_theme">Автор: Alex98</h4>
+                            <h4 className="helper_line__best_qa_item_theme">Автор: {e.username}</h4>
                             <p className="helper_line__best_qa_item_title">{e.answer}</p>
                         </div>
                         )
